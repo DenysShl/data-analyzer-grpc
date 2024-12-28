@@ -13,7 +13,7 @@ public interface DataRepository extends JpaRepository<Data, Long> {
     @Query(value = """
             SELECT *
             FROM data_sensor
-            OFFSET (SELECT current_offset FROM data_offset )
+            OFFSET (SELECT current_offset FROM data_offset LIMIT 1)
             LIMIT :batchSize
             """, nativeQuery = true)
     List<Data> findAllWithOffSet(@Param("batchSize") long batchSize);
