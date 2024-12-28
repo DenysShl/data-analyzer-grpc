@@ -1,4 +1,4 @@
-package org.example.grpc.dataanalyzergrpc;
+package org.example.grpc.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
