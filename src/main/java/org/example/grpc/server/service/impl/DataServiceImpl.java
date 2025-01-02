@@ -6,6 +6,7 @@ import org.example.grpc.server.model.Data;
 import org.example.grpc.server.repository.DataRepository;
 import org.example.grpc.server.service.DataService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class DataServiceImpl implements DataService {
         dataRepository.save(data);
     }
 
+    @Transactional
     @Override
     public List<Data> getWithBatchSize(long batchSize) {
         List<Data> allWithOffSet = dataRepository.findAllWithOffSet(batchSize);

@@ -1,4 +1,4 @@
-package org.example.grpc.server.service;
+package org.example.grpc.server.service.impl;
 
 import com.google.protobuf.Timestamp;
 import grpc.common.AnalyticsServerGrpc;
@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.example.grpc.server.model.Data;
+import org.example.grpc.server.service.DataService;
 
 import java.time.ZoneOffset;
 import java.util.List;
