@@ -32,7 +32,7 @@ public class Data {
     private long sensorId;
     private LocalDateTime timestamp;
     private double measurement;
-    @Column(name = "measurement_type")
+    @Column(name = "type")
     @Enumerated(value = EnumType.STRING)
     private MeasurementType measurementType;
 
